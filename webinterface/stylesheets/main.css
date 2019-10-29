@@ -1,0 +1,33 @@
+body {font-family:Arial}
+
+* {box-sizing: border-box}
+
+.col-1 {width:35%}
+.col-2 {width:65%}
+
+[class*="col-"] {float: left;padding: 15px;min-width:375px}
+
+.row{height:auto}
+
+.row:after {content: "";display: table;clear: both}
+
+#date_time {position:absolute;top:0px;width:100%;text-align:center}
+#panel_temp {position:absolute;top:13%;left:15%}
+#tank_temp {position:absolute;top:67%;left:61%}
+#pump {position:absolute;top:84%;left:28%}
+#heater {position:absolute;top:81%;left:81%}
+
+.schematic 
+{
+	position:relative;font-family:Arial;font-weight:bold;color:#666;width:100%;height:auto;overflow:auto;
+	max-width:375px;margin-left:auto;margin-right:auto
+}
+
+.chart_area {position:relative;width:100%;height:auto}
+
+.system {width:80%;height:auto;padding-top:20px}
+
+@media screen and (max-width: 1088px) 
+{
+	[class*="col-"]	{width: 100%}
+}

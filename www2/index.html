@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="windows-1250">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>System control</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+<script src="/scripts/update_schematic.js"></script>
+<script src="/scripts/format_datetime_string.js"></script>
+<script src="/scripts/get_db_data.js"></script>
+<script src="/scripts/show_status.js"></script>
+
+<script>
+setInterval(showStatus,1000);
+</script>
+
+</head>
+
+<body onload="showStatus()">
+
+<div class="row">
+	<div class="col-1">
+		<div class="schematic">
+		<img class="system" src="system.svg" alt="system">
+		<div id="date_time"></div>
+		<div id="panel_temp"></div>
+		<div id="tank_temp"></div>
+		<div id="pump"></div>
+		<div id="heater"></div>
+		</div>
+
+	</div>
+
+	<div class="col-2">
+		<div class="chart_area">
+		<canvas id="chart"></canvas>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html> 

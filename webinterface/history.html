@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="windows-1250">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>My site</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/calendar.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="/scripts/update_chart.js"></script>
+<script src="/scripts/format_datetime_string.js"></script>
+<script src="/scripts/get_db_data.js"></script>
+<script src="/scripts/show_status.js"></script>
+<script src="/scripts/calendar.js"></script>
+<script src="/scripts/init_calendar.js"></script>
+<script src="/scripts/show_history.js"></script>
+
+</head>
+
+<body onLoad="initCalendar()">
+Datum od:
+<div id="date_from" class="dateField" onClick="showCalendar('date_from','from')">
+</div>
+
+<div id="from" class="calendar">
+</div>
+
+<br>
+
+Datum do:
+<div id="date_to" class="dateField" onClick="showCalendar('date_to','to')">
+</div>
+
+<div id="to" class="calendar">
+</div>
+
+<br>   
+
+<input type="button" value="Zobrazit" onClick="showHistory('date_from','date_to')">
+
+<br><br>
+
+<a href="index.html">Zpět</a>
+
+<div id="chart_area">
+<canvas id="chart"></canvas>
+</div>
+
+
+</body>
+</html> 

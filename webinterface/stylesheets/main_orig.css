@@ -1,0 +1,28 @@
+* 
+{
+  	box-sizing: border-box;
+}
+
+#date_time {position:absolute;top:0px;left:0px;width:100%;text-align:center}
+#panel_temp {position:absolute;top:13%;left:15%}
+#tank_temp {position:absolute;top:67%;left:61%}
+#pump {position:absolute;top:84%;left:28%}
+#heater {position:absolute;top:81%;left:81%}
+#schematic {position:absolute;top:50px;left:10px;font-family:Arial;font-weight:bold;color:#666;width:350px;height:auto}
+#chart_area {position:absolute;top:80px;right:20px;width:50%}
+
+.system {width:80%;height:auto;padding-top:20px}
+
+@media (orientation:portrait) 
+{
+	#chart_area {position:absolute;top:600px;left:0px;width:100%}
+	#schematic {position:absolute;top:20px;left:0px;display:block;margin-left:auto;margin-right:auto;
+			font-family:Arial;font-weight:bold;color:#666;width:100%;height:auto}
+}
+
+body {font-family:Arial}
+
+@media only screen and (min-width: 768px) 
+{
+ 
+}
