@@ -28,8 +28,8 @@ int main(void)
 	switch(status)
 	{
 		case STATUS_OK:
-			printf("{\"panel_temp\":\"%u\",\"tank_temp\":\"%u\",\"pump\":\"%u\",\"heater\":\"%u\"}",
-				data.panel_temp,data.tank_temp,data.status_bits&0x0002,data.status_bits&0x0001);
+			printf("{\"panel_temp\": %d,\"tank_temp\": %d,\"pump\": %d,\"heater\": %d}",
+				data.panel_temp,data.tank_temp,data.status_bits&0x0002?1:0,data.status_bits&0x0001?1:0);
 		break;
 		case TCP_CONN_FAILED:
 			printf("TCP connection failed\n");
